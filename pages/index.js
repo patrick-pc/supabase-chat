@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { ConnectKitButton } from 'connectkit'
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <meta name="description" content="Supabase Chat" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <ConnectKitButton />
       <div className="flex items-center justify-center h-screen w-full">gm</div>
     </div>
   )

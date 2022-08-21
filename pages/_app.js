@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import { WagmiConfig, createClient, chain } from 'wagmi'
 import { ConnectKitProvider, ConnectKitButton, getDefaultClient } from 'connectkit'
+import { Toaster } from 'react-hot-toast'
 
 const alchemyId = process.env.NEXT_PUBLIC_ALCHEMY_ID
 const chains = [chain.mainnet]
@@ -16,8 +17,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <WagmiConfig client={client}>
       <ConnectKitProvider theme="soft">
-        <Component {...pageProps} />
         <ConnectKitButton />
+        <Component {...pageProps} />
+        <Toaster />
       </ConnectKitProvider>
     </WagmiConfig>
   )

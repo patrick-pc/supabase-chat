@@ -17,7 +17,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <WagmiConfig client={client}>
       <ConnectKitProvider theme="soft">
-        <ConnectKitButton />
         <Component {...pageProps} />
         <Toaster />
       </ConnectKitProvider>
